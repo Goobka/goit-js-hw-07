@@ -57,10 +57,14 @@ function randomColor() {
 };
 
 function destroyBoxes() {
-  for (const child of divBoxesRef.children) {
-    child.remove();
-  };
-  inputNumberRef.value = "";
+  // for (const child of divBoxesRef.children) {
+  //  child.remove();
+  // }
+  inputNumberRef.value = '';
+  divBoxesRef.innerHTML = '';
 };
+
+
+
 
 

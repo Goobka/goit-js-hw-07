@@ -3,8 +3,15 @@ console.log(`В списке ${categoriesItemsRef.length} категории.`);
 
 
 
-categoriesItemsRef.forEach(item => console.log(`Категория: ${item.querySelector('h2').textContent}\nКоличество элементов: ${item.querySelectorAll("li").length}`))
-      
+// categoriesItemsRef.forEach(item => console.log(`Категория: ${item.querySelector('h2').textContent}\nКоличество элементов: ${item.querySelectorAll("li").length}`))
+   
+
+categoriesItemsRef.forEach(item =>
+  console.log(
+    `Категория: ${item.firstElementChild.textContent}\nКоличество элементов: ${item.lastElementChild.children.length}`,
+  ),
+);
+
 // for (const item of categoriesItemsRef) {
 //     console.log(
 //       `Категория: ${

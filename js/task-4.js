@@ -9,11 +9,13 @@
 //   <button type="button" data-action="increment">+1</button>
 // </div>
 
+
+// Переменные Функции Слушатели
+
 const counterResult = document.querySelector('#value');
 const decrementBtn = document.querySelector('button[data-action="decrement"]');
 
 const incrementBtn = document.querySelector('button[data-action="increment"]');
-
 let counterValue = 0;
 
 // function onIncrementBtnClick() {
@@ -27,10 +29,6 @@ let counterValue = 0;
 //   counterResult.textContent = counterValue;
 //   return counterResult;
 // }
-
-incrementBtn.addEventListener('click', onIncrementBtnClick);
-decrementBtn.addEventListener('click', onDecrementBtnClick);
-
 
 function resultOfCounter() {
   counterResult.textContent = counterValue;
@@ -46,5 +44,9 @@ function onDecrementBtnClick() {
   counterValue -= 1;
   resultOfCounter();
 }
+
+
+incrementBtn.addEventListener('click', onIncrementBtnClick);
+decrementBtn.addEventListener('click', onDecrementBtnClick);
 
 

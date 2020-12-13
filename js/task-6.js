@@ -23,12 +23,12 @@
 // }
 
 const inputRef = document.querySelector("#validation-input");
-
+console.dir(inputRef)
 inputRef.addEventListener("blur", onInputBlur);
 inputRef.addEventListener('focus', onInputFocus);
 
 function onInputBlur(event) {
-  event.target.value.length === 6 ? event.target.classList.add('valid') : event.target.classList.add('invalid');
+  event.target.value.length === Number(inputRef.dataset.length) ? event.target.classList.add('valid') : event.target.classList.add('invalid');
 }
 
 function onInputFocus(event) {

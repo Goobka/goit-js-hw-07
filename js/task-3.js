@@ -27,21 +27,23 @@ const images = [
 
 const galleryRef = document.querySelector("#gallery");
 
- const items = images.map(image => {
-   const itemEl = document.createElement("li");
-   itemEl.classList.add("js-gallery-item")
-   const imgEl = document.createElement('img');
-   imgEl.src = image.url;
-   imgEl.alt = image.alt;
-   itemEl.appendChild(imgEl);
-   return itemEl;
- })
+// Вариант без insertAdjacentHTML
 
- galleryRef.append(...items);
+//  const items = images.map(image => {
+//    const itemEl = document.createElement("li");
+//    itemEl.classList.add("js-gallery-item")
+//    const imgEl = document.createElement('img');
+//    imgEl.src = image.url;
+//    imgEl.alt = image.alt;
+//    itemEl.appendChild(imgEl);
+//    return itemEl;
+//  })
 
-//const imagesItemString = ({ url, alt }) => {
-// return `<li class = "js-gallery-item"><img src = "${url}" alt = "${alt} width = "400"></li>`};
+//  galleryRef.append(...items);   
 
-//const imgItem = images.map(imagesItemString).join(" ");
+const imagesItemString = ({ url, alt }) => {
+return `<li class = "js-gallery-item"><img src = "${url}" alt = "${alt} width = "400"></li>`};
 
-//galleryRef.insertAdjacentHTML("afterbegin", imgItem);
+const imgItem = images.map(imagesItemString).join(" ");
+
+galleryRef.insertAdjacentHTML("afterbegin", imgItem);

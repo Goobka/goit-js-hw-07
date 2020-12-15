@@ -28,3 +28,15 @@ function onInputChange(event) {
 //Вопрос что при удалении записи в input без перезагрузки страницы span остается пустой?????  ИСПРАВИЛА)
 
 
+/*inputRef.addEventListener('input', onInputChange);
+inputRef.addEventListener('blur', onInputChange);
+
+
+nameLabelRef.hidden = true;
+function onInputChange(event) {
+    let userInfo = inputRef.value.trim();
+    nameLabelRef.hidden = false;
+    inputRef.value.length === 0
+        ? (nameLabelRef.textContent = 'незнакомец')
+        : (nameLabelRef.textContent = userInfo);
+}*/

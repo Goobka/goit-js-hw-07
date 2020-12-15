@@ -15,3 +15,7 @@ textRef.style.fontSize = `${event.target.valueAsNumber}px`;
 
 //console.dir(textRef); //нашла style.fontSize
 //console.dir(inputRef); //нашла value или valueAsNumber
+
+
+
+

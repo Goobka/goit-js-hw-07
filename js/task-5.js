@@ -16,13 +16,14 @@ const nameLabelRef = document.querySelector('#name-output');
 
 inputRef.addEventListener('input', onInputChange);
 
+
 function onInputChange(event) {
-  inputRef.data - length <= 0
+  inputRef.value <= ""
     ? (nameLabelRef.textContent = 'незнакомец' ) 
     : (nameLabelRef.textContent = event.target.value);
-   if (event.target.value === '') {
-         nameLabelRef.textContent = 'незнакомец'
-    }
+   //if (event.target.value === '') {
+    //     nameLabelRef.textContent = 'незнакомец'
+    //}
 }
 
 //Вопрос что при удалении записи в input без перезагрузки страницы span остается пустой?????  ИСПРАВИЛА)
